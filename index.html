@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Application Tracker</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-slate-50 text-slate-700">
+
+  <!-- Header -->
+  <header class="w-[80%] mx-auto my-8 space-y-6">
+    <h1 class="text-4xl font-semibold text-slate-900">
+      Job Application Tracker
+    </h1>
+
+    <div class="grid grid-cols-3 gap-6">
+      <div class="bg-white border border-slate-200 rounded-lg p-4">
+        <p class="text-sm text-slate-500">Total</p>
+        <p id="total" class="text-2xl font-semibold text-slate-900">0</p>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-lg p-4">
+        <p class="text-sm text-slate-500">Interview</p>
+        <p id="interviewCount" class="text-2xl font-semibold text-emerald-600">0</p>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-lg p-4">
+        <p class="text-sm text-slate-500">Rejected</p>
+        <p id="rejectedCount" class="text-2xl font-semibold text-rose-500">0</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-[80%] mx-auto">
+
+    <!-- Filter Buttons -->
+    <div class="mb-6 flex gap-3">
+      <button class="px-5 py-2 rounded-md bg-slate-900 text-white text-sm font-medium">
+        All
+      </button>
+
+      <button class="px-5 py-2 rounded-md bg-white border border-slate-300 text-slate-600 text-sm ">
+        Interview
+      </button>
+
+      <button class="px-5 py-2 rounded-md bg-white border border-slate-300 text-slate-600 text-sm ">
+        Rejected
+      </button>
+    </div>
+
+    <!-- Cards -->
+    <section id="allCards" class="space-y-6">
+
+      <!-- card 8  -->
+      <div class="card flex justify-between bg-white border border-slate-200 rounded-lg p-6">
+        <div class="space-y-5">
+          <div>
+            <p class="text-xl font-semibold text-slate-900">Frontend Developer</p>
+            <p class="text-sm text-slate-500">ToTo Tech Ltd</p>
+          </div>
+
+          <div class="flex gap-2">
+            <span class="px-3 py-1 rounded-full bg-slate-100 text-xs text-slate-600">Remote</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100 text-xs text-slate-600">Full Time</span>
+          </div>
+
+          <p class="text-sm font-medium text-slate-600">Salary: 20k</p>
+
+          <p class="text-sm text-slate-500">Applied by company website.</p>
+
+          <div class="flex gap-4">
+            <button class="px-4 py-2 rounded-md bg-emerald-500 text-white text-sm ">Interview</button>
+            <button class="px-4 py-2 rounded-md bg-rose-100 text-rose-600 text-sm ">Rejected</button>
+          </div>
+        </div>
+
+        <div>
+          <button class="px-4 py-2 rounded-md bg-slate-100 text-slate-500 text-sm ">Delete</button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card flex justify-between bg-white border border-slate-200 rounded-lg p-6">
+        <div class="space-y-5">
+          <div>
+            <p class="text-xl font-semibold text-slate-900">Backend Developer</p>
+            <p class="text-sm text-slate-500">New tech</p>
+          </div>
+
+          <div class="flex gap-2">
+            <span class="px-3 py-1 rounded-full bg-slate-100 text-xs text-slate-600">Onsite</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100 text-xs text-slate-600">Full Time</span>
+          </div>
+
+          <p class="text-sm font-medium text-slate-600">Salary:40k</p>
+
+          <p class="text-sm text-slate-500">Applied By website.</p>
+
+          <div class="flex gap-4">
+            <button class="px-4 py-2 rounded-md bg-emerald-500 text-white text-sm ">Interview</button>
+            <button class="px-4 py-2 rounded-md bg-rose-100 text-rose-600 text-sm ">Rejected</button>
+          </div>
+        </div>
+
+        <div>
+          <button class="px-4 py-2 rounded-md bg-slate-100 text-slate-500 text-sm ">Delete</button>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card flex justify-between bg-white border border-slate-200 p-6 ">
+        <div class="space-y-5">
+          <div>
+            <p class="text-xl font-semibold text-slate-900">website Designer</p>
+            <p class="text-sm text-slate-500">DesignHub</p>
+          </div>
+
+          <div class="flex gap-2">
+            <span class="px-3 py-1 rounded-full bg-slate-100 text-xs text-slate-600">Remote Job</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100 text-xs text-slate-600">Part Time</span>
+          </div>
+
+          <p class="text-sm font-medium text-slate-600">Salary:40k</p>
+
+          <p class="text-sm text-slate-500">Applied by website.</p>
+
+          <div class="flex gap-4">
+            <button class="px-4 py-2 rounded-md bg-emerald-500 text-white text-sm ">Interview</button>
+            <button class="px-4 py-2 rounded-md bg-rose-100 text-rose-600 text-sm ">Rejected</button>
+          </div>
+        </div>
+
+        <div>
+          <button class="px-4 py-2 rounded-md bg-slate-100 text-slate-500 text-sm ">Delete</button>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card flex justify-between bg-white border border-slate-200 rounded-lg p-6">
+        <div class="space-y-5">
+          <div>
+            <p class="text-xl font-semibold text-slate-900">Fullstack Developer</p>
+            <p class="text-sm text-slate-500">Noah LTD.</p>
+          </div>
+
+          <div class="flex gap-2">
+            <span class="px-3 py-1 rounded-full bg-slate-100 text-xs text-slate-600">Ofline</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100 text-xs text-slate-600">Full Time</span>
+          </div>
+
+          <p class="text-sm font-medium text-slate-600">Salary:60k</p>
+
+          <p class="text-sm text-slate-500">Applied by Online.</p>
+
+          <div class="flex gap-4">
+            <button class="px-4 py-2 rounded-md bg-emerald-500 text-white text-sm ">Interview</button>
+            <button class="px-4 py-2 rounded-md bg-rose-100 text-rose-600 text-sm ">Rejected</button>
+          </div>
+        </div>
+
+        <div>
+          <button class="px-4 py-2 rounded-md bg-slate-100 text-slate-500 text-sm ">Delete</button>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card flex justify-between bg-white border border-slate-200 rounded-lg p-6">
+        <div class="space-y-5">
+          <div>
+            <p class="text-xl font-semibold text-slate-900">Data Analyst</p>
+            <p class="text-sm text-slate-500">DataCorp</p>
+          </div>
+
+          <div class="flex gap-2">
+            <span class="px-3 py-1 rounded-full bg-slate-100 text-xs text-slate-600">Remote job</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100 text-xs text-slate-600">Full Time</span>
+          </div>
+
+          <p class="text-sm font-medium text-slate-600">Salary:</p>
+
+          <p class="text-sm text-slate-500">Applied by online.</p>
+
+          <div class="flex gap-4">
+            <button class="px-4 py-2 rounded-md bg-emerald-500 text-white text-sm ">Interview</button>
+            <button class="px-4 py-2 rounded-md bg-rose-100 text-rose-600 text-sm ">Rejected</button>
+          </div>
+        </div>
+
+        <div>
+          <button class="px-4 py-2 rounded-md bg-slate-100 text-slate-500 text-sm ">Delete</button>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="card flex justify-between bg-white border border-slate-200 rounded-lg p-6">
+        <div class="space-y-5">
+          <div>
+            <p class="text-xl font-semibold text-slate-900"> Manager</p>
+            <p class="text-sm text-slate-500">Nano Ltd.</p>
+          </div>
+
+          <div class="flex gap-2">
+            <span class="px-3 py-1 rounded-full bg-slate-100 text-xs text-slate-600">Onsite</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100 text-xs text-slate-600">Full Time</span>
+          </div>
+
+          <p class="text-sm font-medium text-slate-600">Salary:50k</p>
+
+          <p class="text-sm text-slate-500">Applied by Online.</p>
+
+          <div class="flex gap-4">
+            <button class="px-4 py-2 rounded-md bg-emerald-500 text-white text-sm ">Interview</button>
+            <button class="px-4 py-2 rounded-md bg-rose-100 text-rose-600 text-sm ">Rejected</button>
+          </div>
+        </div>
+
+        <div>
+          <button class="px-4 py-2 rounded-md bg-slate-100 text-slate-500 text-sm ">Delete</button>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="card flex justify-between bg-white border border-slate-200 rounded-lg p-6">
+        <div class="space-y-5">
+          <div>
+            <p class="text-xl font-semibold text-slate-900"> Engineer</p>
+            <p class="text-sm text-slate-500">Khan Ltd.</p>
+          </div>
+
+          <div class="flex gap-2">
+            <span class="px-3 py-1 rounded-full bg-slate-100 text-xs text-slate-600">Remote job</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100 text-xs text-slate-600">Part Time</span>
+          </div>
+
+          <p class="text-sm font-medium text-slate-600">Salary:22k</p>
+
+          <p class="text-sm text-slate-500">Applied by Online.</p>
+
+          <div class="flex gap-4">
+            <button class="px-4 py-2 rounded-md bg-emerald-500 text-white text-sm ">Interview</button>
+            <button class="px-4 py-2 rounded-md bg-rose-100 text-rose-600 text-sm ">Rejected</button>
+          </div>
+        </div>
+
+        <div>
+          <button class="px-4 py-2 rounded-md bg-slate-100 text-slate-500 text-sm ">Delete</button>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+
+      <div class="card flex justify-between bg-white border border-slate-200 rounded-lg p-6">
+        <div class="space-y-5">
+          <div>
+            <p class="text-xl font-semibold text-slate-900"> Engineer</p>
+            <p class="text-sm text-slate-500">Naval.js</p>
+          </div>
+
+          <div class="flex gap-2">
+            <span class="px-3 py-1 rounded-full bg-slate-100 text-xs text-slate-600">Onsite</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100 text-xs text-slate-600">Full Time</span>
+          </div>
+
+          <p class="text-sm font-medium text-slate-600">Salary:45k</p>
+
+          <p class="text-sm text-slate-500">Applied by Online.</p>
+
+          <div class="flex gap-4">
+            <button class="px-4 py-2 rounded-md bg-emerald-500 text-white text-sm ">Interview</button>
+            <button class="px-4 py-2 rounded-md bg-rose-100 text-rose-600 text-sm ">Rejected</button>
+          </div>
+        </div>
+
+        <div>
+          <button class="px-4 py-2 rounded-md bg-slate-100 text-slate-500 text-sm ">Delete</button>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+</body>
+</html>
